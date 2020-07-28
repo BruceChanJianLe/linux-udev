@@ -2,7 +2,7 @@
 
 This is a guide to setting up udev to recognize a Logitech Wireless Gamepad F710. This can be generalized to be used for devices.
 
-## Logitech Wireless Gamepad F710
+## Example 1: Logitech Wireless Gamepad F710
 Below shows a picture of Logitech Wireless Gamepad F710.
 ![img](logitech-gamepad-f710.jpg)
 
@@ -58,3 +58,14 @@ You should see something like this
 ```
 lrwxrwxrwx   1 root root       3 Jun  5 13:44 joy_wireless -> js0
 ```
+
+## Example 2: No Touch Screen
+
+Say you have cracked you laptop or monitor touch screen ability and now it is faulty and you would like to disable it after logging in. You may follow the steps below to disable the touch screen feature. There are also several commands where you can run on terminal to disable the touch screen but it is not permanent as rebooting will take it alway, therefore, udev comes in to save the day.
+
+For other methods besides udev please refer to the reference link below...(link2 and link3)
+
+
+
+**Reference**  
+[link1](https://unix.stackexchange.com/questions/127443/how-do-i-disable-the-touch-screen-on-my-laptop/129603#129603) [link2](https://www.youtube.com/watch?v=zlAB_nX27Bo) [link3](https://www.youtube.com/watch?v=7qZBiOsXI_s)
