@@ -65,7 +65,25 @@ Say you have cracked you laptop or monitor touch screen ability and now it is fa
 
 For other methods besides udev please refer to the reference link below...(link2 and link3)
 
+**Step 1**  
+```bash
+ls /usr/share/X11/xorg.conf.d
+```
 
+**Step 2**  
+Edit 40-libinput.conf and add `Option "Ignore" "on"` before EndSection of touchscreen
+```bash
+Section "InputClass"
+        Identifier "libinput touchscreen catchall"
+        MatchIsTouchscreen "on"
+        MatchDevicePath "/dev/input/event*"
+        Driver "libinput"
+        Option "Ignore" "on"
+EndSection
+```
+
+**Step 3**  
+Save, exit and restart your computer.
 
 **Reference**  
 [link1](https://unix.stackexchange.com/questions/127443/how-do-i-disable-the-touch-screen-on-my-laptop/129603#129603) [link2](https://www.youtube.com/watch?v=zlAB_nX27Bo) [link3](https://www.youtube.com/watch?v=7qZBiOsXI_s)
